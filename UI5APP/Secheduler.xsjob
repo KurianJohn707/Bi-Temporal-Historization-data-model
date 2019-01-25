@@ -1,0 +1,13 @@
+{
+	"description": "My Job configuration",
+	"action": "gbi-student-007.Bi-Temporal_Historization.UI5APP:SchedulerSourceFile.xsjs::Mytable",
+	"schedules": [
+		{
+			"description": "My Schedule configuration for execution every 59th minute",
+			"xscron": "* * * * 12 0 *",
+			"parameter": {
+				"myJobParamter": "paramterValue"
+			}
+		}
+	]
+}

@@ -1,0 +1,3 @@
+service {
+    "BI-TEMPORAL_HISTORIZATION"."Customer_Technical" as "Technical_Table";
+}
