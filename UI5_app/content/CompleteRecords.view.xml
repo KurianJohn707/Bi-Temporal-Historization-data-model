@@ -1,0 +1,133 @@
+<mvc:View
+	controllerName="content.CompleteRecords"
+	xmlns="sap.ui.table"
+	xmlns:mvc="sap.ui.core.mvc"
+	xmlns:m="sap.m"
+    xmlns:l="sap.ui.commons.layout"
+    xmlns:html="http://www.w3.org/1999/xhtml"
+    height="100%">
+    
+	<m:Page
+	    title="BI-TEMPORAL HISTORIZATION DATA MODEL"
+		class="sapUiContentPadding"
+		enableScrolling="false"
+		showNavButton="true" 
+		style="background-color: #d86621;">
+        <m:headerContent>
+			<m:Image src="/sapucc/gbi/files/dev/logo.png" width="40px" height="40px"></m:Image>
+		</m:headerContent>
+		<m:content>
+
+			<Table
+				id="table"
+				selectionMode="MultiToggle"
+				rows="{/Technical_Table}"
+				visibleRowCount="15"
+				enableCellFilter="{ui>/cellFilterOn}"
+				ariaLabelledBy="title">
+				
+				<toolbar>
+					<m:Toolbar>
+						<m:Title id="title" text="Customer Details"></m:Title>
+						<m:ToolbarSpacer/>
+						
+						<m:Button text="Clear" tooltip="Clear all filters" press="clearAllFilters"/>
+						<m:ToolbarSeparator/>
+						<m:SearchField placeholder="Customer ID" value="{ui>/globalFilter}" search="filterID" width="15rem"/>
+						<m:ToolbarSeparator/>	
+						<m:SearchField placeholder="Customer Name" value="{ui>/globalFilter}" search="filterName" width="15rem"/>
+						<m:ToolbarSeparator/>
+						<m:SearchField placeholder="City" value="{ui>/globalFilter}" search="filterCity" width="15rem"/>
+					</m:Toolbar>
+					
+				</toolbar>
+				
+				<columns>
+				
+					<Column
+						width="3.5rem"
+						filterProperty="CUSTOMER_NUMBER">
+						<m:Label text="Customer ID" />
+						<template>
+							<m:Text text="{CUSTOMER_NUMBER}" wrapping="false" />
+						</template>
+					</Column>
+					
+					<Column
+						width="4.5rem"
+						filterProperty="CUSTOMER_NAME"
+						defaultFilterOperator="StartsWith">
+						<m:Label text="Customer Name" />
+						<template>
+							<m:Text text="{CUSTOMER_NAME}" wrapping="false" />
+						</template>
+					</Column>
+					
+					<Column
+						width="3rem"
+						filterProperty="CITY"
+						defaultFilterOperator="StartsWith">
+						<m:Label text="City" />
+						<template>
+							<m:Text text="{CITY}" wrapping="false" />
+						</template>
+					</Column>
+					
+					<Column
+						width="6rem"
+						filterProperty="MODIFICATION_TIME"
+						defaultFilterOperator="Date">
+						<m:Label text="MODIFICATION_TIME" />
+						<template>
+							<m:Text text="{path: 'MODIFICATION_TIME',type: 'sap.ui.model.type.DateTime',formatOptions: {style: 'short'} }" wrapping="false" />
+						</template>
+					</Column>
+					
+					<Column
+						width="6rem"
+						hAlign="End">
+						<m:Label text="BUSINESS_VALID_FROM" />
+						<template>
+							<m:Text text="{path: 'BUSINESS_VALID_FROM',type: 'sap.ui.model.type.Date',formatOptions: {style: 'medium'} }" wrapping="false" />
+						</template>
+					</Column>
+					
+					<Column
+						width="6rem"
+						hAlign="End">
+						<m:Label text="BUSINESS_VALID_TO" />
+						<template>
+							<m:Text text="{path: 'BUSINESS_VALID_TO',type: 'sap.ui.model.type.Date',formatOptions: {style: 'medium'} }" wrapping="false" />
+						</template>
+					</Column>
+					
+					<Column
+						width="6rem"
+						hAlign="End">
+						<m:Label text="TECHNICAL_VALID_FROM" />
+						<template>
+							<m:Text text="{path: 'TECHNICAL_VALID_FROM',type: 'sap.ui.model.type.Date',formatOptions: {style: 'medium'} }" wrapping="false" />
+						</template>
+					</Column>
+					
+					<Column
+						width="6rem"
+						hAlign="End">
+						<m:Label text="TECHNICAL_VALID_TO" />
+						<template>
+							<m:Text text="{path: 'TECHNICAL_VALID_TO',type: 'sap.ui.model.type.Date',formatOptions: {style: 'medium'} }" wrapping="false" />
+						</template>
+					</Column>
+					
+				</columns>
+				
+			</Table>
+			
+    	
+			
+		</m:content>
+		
+	</m:Page>
+	
+	
+</mvc:View>
