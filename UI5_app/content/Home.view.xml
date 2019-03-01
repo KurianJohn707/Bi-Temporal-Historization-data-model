@@ -1,0 +1,51 @@
+<mvc:View controllerName="content.Home"
+	xmlns:m="sap.m" xmlns:mvc="sap.ui.core.mvc" xmlns:html="http://www.w3.org/1999/xhtml">
+	
+	<html:style>
+	    .zoom {
+          transition: transform .2s; /* Animation */
+        }
+	    .zoom:hover {
+          transform: scale(1.1); /* (150% zoom - Note: if the zoom is too large, it will go outside of the viewport) */
+        }
+    </html:style>
+	<m:Page
+	    title="BI-TEMPORAL HISTORIZATION DATA MODEL"
+		class="sapUiContentPadding"
+		enableScrolling="false">
+        <m:customHeader>
+		    <m:Bar>
+		        <m:contentLeft>
+		            <html:a href="/gbi-student-007/Bi-Temporal_Historization/UI5_app/index.html" >
+                	   <m:Button tooltip="Home" icon="sap-icon://home"/>
+                    </html:a>
+		        </m:contentLeft>
+		
+		        <m:contentMiddle>
+		            <m:Text text = "BI-TEMPORAL HISTORIZATION DATA MODEL"></m:Text>
+		        </m:contentMiddle>
+		
+		        <m:contentRight>
+		            <m:Image src="/gbi-student-007/Bi-Temporal_Historization/UI5_app/content/Images/SAPLogo.png" width="60px" height="30px"></m:Image>
+		        </m:contentRight>		
+		    </m:Bar>
+		</m:customHeader>
+		<m:content>
+            <html:br/><html:br/><html:br/><html:br/>
+        	<html:center>
+                	<html:a href="/gbi-student-007/Bi-Temporal_Historization/UI5_app/CompleteRecords.html" hspace="20">
+                	    <html:img src="/gbi-student-007/Bi-Temporal_Historization/UI5_app/content/Images/CompleteRecordsTile.png" alt="Complete Records" hspace="20" class="zoom"/>
+                    </html:a>
+
+                    <html:a href="/gbi-student-007/Bi-Temporal_Historization/UI5_app/ActiveRecords.html" >
+                        <html:img src="/gbi-student-007/Bi-Temporal_Historization/UI5_app/content/Images/ActiveRecordsTile.png" alt="Complete Records" hspace="20" class="zoom"/>
+                    </html:a>
+
+                    <html:a href="/gbi-student-007/Bi-Temporal_Historization/UI5_app/CurrentRecords.html" >
+                        <html:img src="/gbi-student-007/Bi-Temporal_Historization/UI5_app/content/Images/CurrentRecordsTile.png" alt="Complete Records" hspace="20" class="zoom"/>
+                    </html:a>
+            </html:center>
+	    </m:content>
+		
+	</m:Page>
+</mvc:View>

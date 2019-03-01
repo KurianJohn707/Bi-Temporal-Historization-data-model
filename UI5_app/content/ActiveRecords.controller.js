@@ -1,5 +1,5 @@
 // the controller for the view Main
-sap.ui.controller("content.CompleteRecords", {
+sap.ui.controller("content.ActiveRecords", {
 
 	// controller logic goes here
     
@@ -101,18 +101,11 @@ sap.ui.controller("content.CompleteRecords", {
 		clearAllFilters : function(oEvent) {
 			var oTable = this.byId("table");
 
-			var Filter = this.getView().byId("IDFilter");
-            Filter.setValue("");
-            
-            Filter = this.getView().byId("NameFilter");
-            Filter.setValue("");
-            
-            Filter = this.getView().byId("CityFilter");
-            Filter.setValue("");
-			
-			this._oIDFilter = null;
-            this._oNameFilter = null;
-            this._oCityFilter = null;
+			var oUiModel = this.getView().getModel();
+			oUiModel.setProperty("/globalFilter", "");
+			oUiModel.setProperty("/availabilityFilterOn", false);
+
+			this._oGlobalFilter = null;
 			this._filter();
 
 			var aColumns = oTable.getColumns();
