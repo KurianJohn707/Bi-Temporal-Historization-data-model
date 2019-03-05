@@ -33,14 +33,14 @@
 			<Table
 				id="table"
 				selectionMode="MultiToggle"
-				rows="{/Technical_Table}"
+				rows="{/PastTruthTable}"
 				visibleRowCount="15"
 				enableCellFilter="{ui>/cellFilterOn}"
 				ariaLabelledBy="title">
 				
 				<toolbar>
 					<m:Toolbar>
-						<m:Title id="title" text="Customer Details"></m:Title>
+						<m:Title id="title" text="Past True Records of Customers"></m:Title>
 						<m:ToolbarSpacer/>
 						
 						<m:Button text="Clear" tooltip="Clear all filters" press="clearAllFilters"/>
@@ -113,29 +113,17 @@
 						</template>
 					</Column>
 					
-					<Column
-						width="6rem"
-						hAlign="End">
-						<m:Label text="TECHNICAL_VALID_FROM" />
-						<template>
-							<m:Text text="{path: 'TECHNICAL_VALID_FROM',type: 'sap.ui.model.type.Date',formatOptions: {style: 'medium'} }" wrapping="false" />
-						</template>
-					</Column>
-					
-					<Column
-						width="6rem"
-						hAlign="End">
-						<m:Label text="TECHNICAL_VALID_TO" />
-						<template>
-							<m:Text text="{path: 'TECHNICAL_VALID_TO',type: 'sap.ui.model.type.Date',formatOptions: {style: 'medium'} }" wrapping="false" />
-						</template>
-					</Column>
-					
 				</columns>
 				
 			</Table>
 			
-    	
+    	    <html:p/> <html:p/>
+			<m:Bar>
+				<m:contentRight>
+				    <m:Link text="Go to Current Truth" href="https://h02-d03.ucc.ovgu.de/gbi-student-007/Bi-Temporal_Historization/UI5_app/CurrentRecords.html" />
+					<m:Link text="Go to Complete Records" href="https://h02-d03.ucc.ovgu.de/gbi-student-007/Bi-Temporal_Historization/UI5_app/CompleteRecords.html" />
+				</m:contentRight>
+			</m:Bar>
 			
 		</m:content>
 		

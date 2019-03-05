@@ -34,18 +34,20 @@
             <html:br/><html:br/><html:br/><html:br/>
         	<html:center>
                 	<html:a href="/gbi-student-007/Bi-Temporal_Historization/UI5_app/CompleteRecords.html" hspace="20">
-                	    <html:img src="/gbi-student-007/Bi-Temporal_Historization/UI5_app/content/Images/CompleteRecordsTile.png" alt="Complete Records" hspace="20" class="zoom"/>
+                	    <html:img src="/gbi-student-007/Bi-Temporal_Historization/UI5_app/content/Images/CompleteRecords.png" alt="Complete Records" hspace="20" width="30%" height="30%" class="zoom"/>
                     </html:a>
 
                     <html:a href="/gbi-student-007/Bi-Temporal_Historization/UI5_app/ActiveRecords.html" >
-                        <html:img src="/gbi-student-007/Bi-Temporal_Historization/UI5_app/content/Images/ActiveRecordsTile.png" alt="Complete Records" hspace="20" class="zoom"/>
+                        <html:img src="/gbi-student-007/Bi-Temporal_Historization/UI5_app/content/Images/ActiveRecords.png" alt="Complete Records" hspace="20" width="30%" height="30%" class="zoom"/>
                     </html:a>
 
                     <html:a href="/gbi-student-007/Bi-Temporal_Historization/UI5_app/CurrentRecords.html" >
-                        <html:img src="/gbi-student-007/Bi-Temporal_Historization/UI5_app/content/Images/CurrentRecordsTile.png" alt="Complete Records" hspace="20" class="zoom"/>
+                        <html:img src="/gbi-student-007/Bi-Temporal_Historization/UI5_app/content/Images/CurrentRecords.png" alt="Complete Records" hspace="20" width="30%" height="30%" class="zoom"/>
                     </html:a>
             </html:center>
 	    </m:content>
+		
+	
 		
 	</m:Page>
 </mvc:View>

@@ -1,6 +1,6 @@
 
 
-TRUNCATE TABLE "BI-TEMPORAL_HISTORIZATION"."Customer_Technical";
+TRUNCATE TABLE "GBI_007"."Customer_Staging_Store";
 
 drop procedure "BI-TEMPORAL_HISTORIZATION"."gbi-student-007.Bi-Temporal_Historization::bitemporalCorrection";
 
