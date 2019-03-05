@@ -1,0 +1,8 @@
+import = [
+{
+hdbtable = "gbi-student-000.Bi-Temporal_Historisation::CustomerStaging2";                   
+file = "gbi-student-000.Bi-Temporal_Historisation:SampleRecords2.csv";    
+header = true;
+delimField = ",";
+}
+];
